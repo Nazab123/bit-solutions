@@ -2,6 +2,8 @@ import "./App.css"
 import logoBit from "./assets/logo-bit.jpeg"
 import { FaWhatsapp, FaInstagram } from "react-icons/fa"
 import { useForm } from "@formspree/react"
+import { useEffect, useState } from "react"
+import PeluqueriaDemo from "./demos/peluqueria/PeluqueriaDemo"
 
 function Navbar() {
   return (
@@ -38,6 +40,7 @@ function Navbar() {
         >
           Nosotros
         </a>
+        <a href="#demos">Demos</a>
 
         <a href="#contacto">Contacto</a>
       </div>
@@ -148,6 +151,38 @@ function About() {
           combinando diseño, funcionalidad y tecnología en herramientas
           modernas, prácticas y pensadas para crecer.
         </p>
+      </div>
+    </section>
+  )
+}
+
+function Demos() {
+  return (
+    <section className="section demos-section" id="demos">
+      <div className="section-header">
+        <p className="tag">DEMOS</p>
+        <h2>Ideas listas para adaptar a distintos negocios.</h2>
+      </div>
+
+      <div className="demo-card">
+        <div className="demo-preview">
+          <span>Agenda online</span>
+          <strong>Studio Demo</strong>
+          <p>Servicios · Profesionales · Reservas</p>
+        </div>
+
+        <div className="demo-content">
+          <p className="tag">PELUQUERÍA / ESTÉTICA</p>
+          <h3>Web con gestión de reservas</h3>
+          <p>
+            Demo genérica para salones, barberías, centros de estética, uñas,
+            pestañas y profesionales que trabajan con agenda.
+          </p>
+
+          <a href="#/demos/peluqueria" className="btn-primary">
+            Ver demo
+          </a>
+        </div>
       </div>
     </section>
   )
@@ -266,12 +301,27 @@ function Footer() {
     </footer>
   )
 }
+
 function App() {
+  const [hash, setHash] = useState(window.location.hash)
+
+  useEffect(() => {
+    const handleHashChange = () => setHash(window.location.hash)
+
+    window.addEventListener("hashchange", handleHashChange)
+
+    return () => window.removeEventListener("hashchange", handleHashChange)
+  }, [])
+
+    if (hash.startsWith("#/demos/peluqueria")) {
+      return <PeluqueriaDemo hash={hash} />
+    }
   return (
     <>
       <Navbar />
       <Hero />
       <Services />
+      <Demos />
       <About />
       <Contact />
       <Footer />
