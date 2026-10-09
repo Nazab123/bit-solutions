@@ -52,21 +52,29 @@ function Hero() {
   return (
     <section className="hero" id="inicio">
       <div className="hero-text">
-        <p className="tag">SOLUCIONES DIGITALES</p>
+        <p className="tag">DESARROLLO WEB Y SOLUCIONES DIGITALES</p>
 
         <h1>
-          Soluciones digitales que hacen
-          <span> crecer negocios.</span>
+          Tu negocio tiene su forma de trabajar.
+          <span> Creamos tecnología que se adapta a ella.</span>
         </h1>
 
         <p className="hero-description">
-          Creamos páginas web modernas, automatizaciones y herramientas
-          digitales pensadas para potenciar tu negocio.
+          Diseñamos páginas web, sistemas de reservas,
+          herramientas de gestión y automatizaciones
+          para que tu negocio ahorre tiempo, se organice
+          mejor y siga creciendo.
         </p>
 
-        <a href="#contacto" className="btn-primary">
-          Quiero mi proyecto
-        </a>
+        <div className="hero-actions">
+          <a href="#contacto" className="btn-primary">
+            Contanos tu idea →
+          </a>
+
+          <a href="#demos" className="btn-secondary">
+            Explorar demos
+          </a>
+        </div>
       </div>
 
       <div className="hero-card">
