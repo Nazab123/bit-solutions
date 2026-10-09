@@ -1,6 +1,7 @@
 import "./App.css"
 import logoBit from "./assets/logo-bit.jpeg"
-import { FaWhatsapp, FaInstagram } from "react-icons/fa"
+import {FaWhatsapp, FaInstagram, FaGlobe, FaLaptopCode, FaCogs, FaChartBar} from "react-icons/fa"
+import {FaCalendarAlt, FaShoppingBag, FaCalculator, FaUsers, FaCreditCard, FaClipboardList, FaBoxOpen, FaChartLine} from "react-icons/fa"
 import { useForm } from "@formspree/react"
 import { useEffect, useState } from "react"
 import PeluqueriaDemo from "./demos/peluqueria/PeluqueriaDemo"
@@ -16,34 +17,23 @@ function Navbar() {
         />
       </div>
 
-      <div className="nav-links">
-        <a href="#inicio">Inicio</a>
 
-        <a href="#servicios">Servicios</a>
+<div className="nav-links">
+  <a href="#inicio">Inicio</a>
 
-        <a
-          href="#nosotros"
-          onClick={(e) => {
-            e.preventDefault()
+  <a href="#servicios">Servicios</a>
 
-            const section = document.getElementById("nosotros")
+  <a href="#funcionalidades">Soluciones</a>
 
-            const posicion =
-              section.getBoundingClientRect().bottom +
-              window.scrollY - 700
+  <a href="#demos">Demos</a>
 
-            window.scrollTo({
-              top: posicion,
-              behavior: "smooth"
-            })
-          }}
-        >
-          Nosotros
-        </a>
-        <a href="#demos">Demos</a>
+  <a href="#nosotros">Nosotros</a>
 
-        <a href="#contacto">Contacto</a>
-      </div>
+  <a href="#contacto" className="nav-contact">
+    Contacto
+  </a>
+</div>
+
     </nav>
   )
 }
@@ -97,72 +87,192 @@ function Hero() {
 function Services() {
   return (
     <section className="section" id="servicios">
+
       <div className="section-header">
-        <p className="tag">SERVICIOS</p>
-        <h2>¿Qué podemos hacer por tu negocio?</h2>
+        <p className="tag">NUESTROS SERVICIOS</p>
+
+        <h2>¿Qué podemos crear para tu negocio?</h2>
+
+        <p className="services-intro">
+          Desde una página web para mostrar lo que hacés
+          hasta herramientas digitales para simplificar
+          tu trabajo.
+        </p>
       </div>
 
       <div className="services-grid">
+
         <div className="service-card">
-          <div className="icon">🌐</div>
+          <div className="service-icon">
+            <FaGlobe />
+          </div>
+
           <h3>Páginas web</h3>
+
           <p>
-            Sitios modernos, rápidos y adaptados a celular para mostrar tu
-            negocio de forma profesional.
+            Mostrá tu negocio, productos y servicios
+            con una web moderna, profesional y
+            adaptada a cualquier dispositivo.
           </p>
         </div>
 
         <div className="service-card">
-          <div className="icon">⚙️</div>
+          <div className="service-icon">
+            <FaLaptopCode />
+          </div>
+
+          <h3>Sistemas a medida</h3>
+
+          <p>
+            Desarrollamos sistemas de reservas,
+            gestión de clientes, pedidos y herramientas
+            adaptadas a tu forma de trabajar.
+          </p>
+        </div>
+
+        <div className="service-card">
+          <div className="service-icon">
+            <FaCogs />
+          </div>
+
           <h3>Automatizaciones</h3>
+
           <p>
-            Simplificamos tareas repetitivas para ayudarte a ahorrar tiempo y
-            trabajar mejor.
+            Simplificamos tareas repetitivas y
+            procesos manuales para que puedas
+            ahorrar tiempo y enfocarte en tu negocio.
           </p>
         </div>
 
         <div className="service-card">
-          <div className="icon">📊</div>
+          <div className="service-icon">
+            <FaChartBar />
+          </div>
+
           <h3>Datos y dashboards</h3>
+
           <p>
-            Transformamos información en reportes claros para ayudarte a tomar
-            mejores decisiones.
+            Transformamos tus datos en reportes
+            y paneles visuales que te ayudan
+            a entender mejor tu negocio.
           </p>
         </div>
+
       </div>
+
+      <p className="services-note">
+        Cada solución se adapta a las necesidades
+        y objetivos de tu negocio.
+      </p>
+
     </section>
   )
 }
+
+
+function HowWeWork() {
+
+  const pasos = [
+    {
+      titulo: "Nos contás tu idea",
+      descripcion: "Conocemos tu negocio, cómo trabajás y qué te gustaría mejorar."
+    },
+    {
+      titulo: "Armamos una propuesta",
+      descripcion: "Definimos las funcionalidades, el presupuesto y los tiempos del proyecto."
+    },
+    {
+      titulo: "Desarrollamos tu solución",
+      descripcion: "Construimos la herramienta y te mostramos los avances."
+    },
+    {
+      titulo: "Ponemos todo en marcha",
+      descripcion: "Probamos, publicamos y te explicamos cómo utilizar tu proyecto."
+    }
+  ]
+
+  return (
+    <section className="section process-section" id="proceso">
+
+      <div className="section-header">
+        <p className="tag">NUESTRO PROCESO</p>
+
+        <h2>De tu idea a una solución real.</h2>
+
+        <p className="process-description">
+          Te acompañamos en cada etapa para transformar
+          lo que necesitás en una herramienta para tu negocio.
+        </p>
+      </div>
+
+      <div className="process-grid">
+
+        {pasos.map((paso, index) => (
+          <div className="process-card" key={paso.titulo}>
+
+            <span className="process-number">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+
+            <h3>{paso.titulo}</h3>
+
+            <p>{paso.descripcion}</p>
+
+          </div>
+        ))}
+
+      </div>
+
+    </section>
+  )
+}
+
+
+
 
 function About() {
   return (
     <section className="about" id="nosotros">
+
       <div className="about-left">
-        <p className="tag">BIT SOLUTIONS</p>
-        <h2>Tecnología pensada para negocios reales.</h2>
+        <p className="tag">SOBRE BIT SOLUTIONS</p>
+
+        <h2>
+          Tecnología cercana,
+          soluciones a medida.
+        </h2>
       </div>
 
       <div className="about-right">
+
         <p>
-          En Bit Solutions creemos que la tecnología tiene que hacer las cosas
-          más simples, no más complicadas.
+          Bit Solutions nace con una idea simple:
+          acercar herramientas digitales útiles a
+          negocios y emprendimientos.
         </p>
 
         <p>
-          Creamos soluciones digitales para ayudar a negocios y emprendimientos
-          a mejorar su presencia online, optimizar procesos y trabajar de forma
-          más eficiente.
+          Nos interesa entender cómo funciona cada negocio,
+          qué dificultades tiene y qué podemos desarrollar
+          para facilitar su día a día.
         </p>
 
         <p>
-          Cada proyecto se adapta a las necesidades reales de cada cliente,
-          combinando diseño, funcionalidad y tecnología en herramientas
-          modernas, prácticas y pensadas para crecer.
+          Creemos que una buena solución no es necesariamente
+          la más compleja, sino la que realmente ayuda
+          a trabajar mejor.
         </p>
+
+        <a href="#contacto" className="about-link">
+          Conversemos sobre tu proyecto →
+        </a>
+
       </div>
+
     </section>
   )
 }
+
 
 function Demos() {
   return (
@@ -196,15 +306,202 @@ function Demos() {
   )
 }
 
+function Features() {
+
+  const funcionalidades = [
+    {
+      icon: FaCalendarAlt,
+      title: "Reservas online",
+      description: "Tus clientes pueden elegir servicios, fechas y horarios disponibles."
+    },
+    {
+      icon: FaShoppingBag,
+      title: "Pedidos personalizados",
+      description: "Recibí pedidos con opciones, cantidades y extras elegidos por el cliente."
+    },
+    {
+      icon: FaCalculator,
+      title: "Presupuestos automáticos",
+      description: "Calculá precios automáticamente según las opciones seleccionadas."
+    },
+    {
+      icon: FaUsers,
+      title: "Gestión de clientes",
+      description: "Organizá información, historial y seguimiento de tus clientes."
+    },
+    {
+      icon: FaCreditCard,
+      title: "Señas y pagos",
+      description: "Gestioná señas, comprobantes y estados de pago."
+    },
+    {
+      icon: FaClipboardList,
+      title: "Paneles administrativos",
+      description: "Administrá reservas, servicios y pedidos desde un solo lugar."
+    },
+    {
+      icon: FaBoxOpen,
+      title: "Control de stock",
+      description: "Llevá un registro de productos, cantidades y disponibilidad."
+    },
+    {
+      icon: FaChartLine,
+      title: "Reportes de ventas",
+      description: "Visualizá resultados e indicadores importantes de tu negocio."
+    },
+    {
+      icon: FaWhatsapp,
+      title: "Integraciones con WhatsApp",
+      description: "Facilitá consultas, confirmaciones y comunicaciones con tus clientes."
+    }
+  ]
+
+  return (
+    <section className="section features-section" id="funcionalidades">
+
+      <div className="section-header">
+        <p className="tag">SOLUCIONES PERSONALIZADAS</p>
+
+        <h2>
+          Una web puede hacer mucho más
+          que mostrar información.
+        </h2>
+
+        <p className="features-description">
+          Estas son algunas de las funcionalidades
+          que podemos desarrollar para simplificar
+          el día a día de tu negocio.
+        </p>
+      </div>
+
+      <div className="features-grid">
+
+        {funcionalidades.map((funcionalidad) => {
+
+          const Icono = funcionalidad.icon
+
+          return (
+            <div className="feature-card" key={funcionalidad.title}>
+
+              <div className="feature-icon">
+                <Icono />
+              </div>
+
+              <h3>{funcionalidad.title}</h3>
+
+              <p>{funcionalidad.description}</p>
+
+            </div>
+          )
+        })}
+
+      </div>
+
+      <div className="features-cta">
+
+        <h3>¿Necesitás algo diferente?</h3>
+
+        <p>
+          Contanos tu idea y buscamos una solución
+          que se adapte a tu negocio.
+        </p>
+
+        <a href="#contacto" className="btn-primary">
+          Hablemos de tu proyecto →
+        </a>
+
+      </div>
+
+    </section>
+  )
+}
+
+
+function FAQ() {
+
+  const preguntas = [
+    {
+      pregunta: "¿Cuánto cuesta desarrollar una página web?",
+      respuesta: "El precio depende del diseño, las funcionalidades y las necesidades de cada negocio. Preparamos un presupuesto personalizado."
+    },
+    {
+      pregunta: "¿Necesito saber de tecnología?",
+      respuesta: "No. Nos contás qué necesitás y te ayudamos a encontrar la solución más adecuada para tu negocio."
+    },
+    {
+      pregunta: "¿Puedo administrar mi propia página o sistema?",
+      respuesta: "Sí, podemos desarrollar herramientas para que gestiones contenidos, servicios, reservas o pedidos según las necesidades de tu proyecto."
+    },
+    {
+      pregunta: "¿Puedo agregar funcionalidades más adelante?",
+      respuesta: "Sí. Podemos planificar el proyecto por etapas y evaluar nuevas funcionalidades a medida que tu negocio crezca."
+    },
+    {
+      pregunta: "¿Trabajan con emprendimientos pequeños?",
+      respuesta: "Sí. Desarrollamos propuestas adaptadas a emprendedores, profesionales y comercios de distintos rubros."
+    },
+    {
+      pregunta: "¿Cuánto demora desarrollar un proyecto?",
+      respuesta: "Depende de la complejidad y las funcionalidades solicitadas. Antes de comenzar, definimos los tiempos estimados de desarrollo."
+    }
+  ]
+
+  return (
+    <section className="section faq-section" id="preguntas">
+
+      <div className="section-header">
+        <p className="tag">PREGUNTAS FRECUENTES</p>
+
+        <h2>¿Tenés alguna duda?</h2>
+
+        <p className="faq-description">
+          Estas son algunas de las preguntas más comunes
+          antes de comenzar un proyecto.
+        </p>
+      </div>
+
+      <div className="faq-list">
+
+        {preguntas.map((item) => (
+          <details className="faq-item" key={item.pregunta}>
+
+            <summary>
+              {item.pregunta}
+
+              <span className="faq-plus" aria-hidden="true">
+                +
+              </span>
+            </summary>
+
+            <p>{item.respuesta}</p>
+
+          </details>
+        ))}
+
+      </div>
+
+    </section>
+  )
+}
+
+
+
 function Contact() {
   const [state, handleSubmit] = useForm("mvkzzzpz")
   return (
-    <section className="contact" id="contacto">
-      <h2 className="contact-title">¿Tenés una idea?</h2>
+            <section className="contact" id="contacto">
 
-      <p className="contact-description">
-        Contanos qué necesitás y vemos juntos cuál es la mejor solución para tu negocio.
-      </p>
+        <h2 className="contact-title">
+          Hagamos realidad tu idea.
+        </h2>
+
+        <p className="contact-description">
+          No importa si ya sabés exactamente lo que necesitás
+          o si recién tenés una idea.
+          Contanos sobre tu negocio y buscamos juntos
+          la mejor solución.
+        </p>
+
           <form
             className="contact-form"
             onSubmit={handleSubmit}
@@ -329,8 +626,11 @@ function App() {
       <Navbar />
       <Hero />
       <Services />
+      <Features />
       <Demos />
+      <HowWeWork />
       <About />
+      <FAQ />
       <Contact />
       <Footer />
     </>
@@ -338,3 +638,4 @@ function App() {
 }
 
 export default App
+
