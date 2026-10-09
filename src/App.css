@@ -961,3 +961,84 @@ footer p {
 section[id] {
   scroll-margin-top: 110px;
 }
+
+/* =========================
+   MENU HAMBURGUESA
+========================= */
+
+/* Oculto en computadoras */
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #075cff;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tablets y celulares */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 15px 6%;
+  }
+
+  /* Mostramos el botón hamburguesa */
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Menú cerrado */
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    gap: 0;
+    padding: 15px 6% 25px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+    max-height: calc(100vh - 75px);
+    overflow-y: auto;
+    z-index: 1001;
+  }
+
+  /* Menú abierto */
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  /* Enlaces */
+
+  .nav-links a {
+    display: block;
+    padding: 15px 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #eef1f5;
+    color: #111;
+  }
+
+  /* Botón de contacto */
+
+  .nav-links .nav-contact {
+    margin-top: 15px;
+    background: #075cff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+  }
+
+}
