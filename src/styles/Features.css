@@ -1,0 +1,115 @@
+/* =========================
+   FUNCIONALIDADES
+========================= */
+
+.features-section {
+  background: #f8faff;
+}
+
+/* Texto debajo del titulo */
+
+
+
+/* Contenedor de funcionalidades */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* Tarjetas */
+
+.feature-card {
+  background: #ffffff;
+  padding: 30px;
+  border: 1px solid #e5eaf3;
+  border-radius: 18px;
+  transition: 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #b8cfff;
+  box-shadow: 0 15px 35px rgba(7, 92, 255, 0.07);
+}
+
+/* Iconos */
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf1ff;
+  color: #075cff;
+  font-size: 23px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+/* Titulos */
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+/* Descripciones */
+
+.feature-card p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Invitacion a consultar */
+
+.features-cta {
+  margin-top: 55px;
+  padding: 45px 30px;
+  background: #ffffff;
+  border: 1px solid #e5eaf3;
+  border-radius: 22px;
+  text-align: center;
+}
+
+.features-cta h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.features-cta p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 25px;
+  }
+
+  .features-cta {
+    padding: 35px 20px;
+  }
+
+  .features-cta h3 {
+    font-size: 24px;
+  }
+}

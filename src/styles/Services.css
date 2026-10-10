@@ -1,0 +1,173 @@
+/* ========================
+   SERVICIOS
+======================== */
+
+
+/* Contenedor de tarjetas */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Tarjetas */
+
+.service-card {
+  background: #ffffff;
+  padding: 35px;
+  border: 1px solid #e5eaf3;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(7, 92, 255, 0.08);
+  border-color: #b8cfff;
+}
+
+/* Contenedor del icono */
+
+.service-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf1ff;
+  color: #075cff;
+  font-size: 26px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+/* Titulos de los servicios */
+
+.service-card h3 {
+  font-size: 23px;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+/* Descripciones */
+
+.service-card p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Texto inferior */
+
+.services-note {
+  margin-top: 35px;
+  text-align: center;
+  color: #777;
+  font-size: 15px;
+}
+
+/* CONTACT */
+.contact {
+  padding: 100px 8%;
+  text-align: center;
+  background: #075cff;
+  color: white;
+}
+
+.contact-form {
+  max-width: 650px;
+  margin: 45px auto 0;
+  padding: 35px;
+  background: white;
+  border-radius: 24px;
+  text-align: left;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #111;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #075cff;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #075cff;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background: #004bd6;
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 40px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #080808;
+  color: white;
+}
+
+footer p {
+  color: #aaa;
+  margin-top: 8px;
+}
+
+
+/* RESPONSIVE GENERAL */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 50px;
+  }
+
+  .hero-card {
+    transform: none;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}

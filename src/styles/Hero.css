@@ -1,0 +1,97 @@
+.hero {
+  min-height: 85vh;
+  padding: 80px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+  background:
+    radial-gradient(circle at 90% 10%, #e8f0ff 0, transparent 30%),
+    #ffffff;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 4.8vw, 66px);
+  line-height: 1.08;
+  max-width: 800px;
+  letter-spacing: -1.5px;
+  font-weight: 700;
+}
+
+.hero h1 span {
+  color: #075cff;
+}
+
+.hero-description {
+  margin: 28px 0 35px;
+  max-width: 580px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+}
+
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+  transform: rotate(2deg);
+}
+
+
+/* BARRA DEL NAVEGADOR */
+
+.browser-bar {
+  padding: 15px;
+  display: flex;
+  gap: 8px;
+  background: #f3f5f8;
+}
+
+.browser-bar span {
+  width: 10px;
+  height: 10px;
+  background: #cfd5df;
+  border-radius: 50%;
+}
+
+/* CONTENIDO DEL MOCKUP */
+
+.mockup-content {
+  min-height: 380px;
+  padding: 70px 50px;
+  background:
+    radial-gradient(circle at 80% 30%, #dce8ff, transparent 35%),
+    #f8faff;
+}
+
+.mockup-content p {
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.mockup-content h2 {
+  margin-top: 40px;
+  font-size: 46px;
+  max-width: 450px;
+}
+
+/* BOTÓN DECORATIVO DEL MOCKUP */
+
+.fake-button {
+  margin-top: 30px;
+  display: inline-block;
+  background: #075cff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
