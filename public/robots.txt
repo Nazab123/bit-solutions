@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://salmon-bay-00e7b6110.4.azurestaticapps.net/sitemap.xml
