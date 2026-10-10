@@ -1,30 +1,36 @@
+
 import "../styles/Hero.css"
 
 function Hero() {
   return (
     <section className="hero" id="inicio">
       <div className="hero-text">
-        <p className="tag">DESARROLLO WEB Y SOLUCIONES DIGITALES</p>
+        <p className="tag">
+          DESARROLLO WEB Y SOLUCIONES DIGITALES EN URUGUAY
+        </p>
 
         <h1>
-          Tu negocio tiene su forma de trabajar.
-          <span> Creamos tecnología que se adapta a ella.</span>
+          Diseño de páginas web para negocios en Uruguay.
+          <span> Tecnología que se adapta a vos.</span>
         </h1>
 
         <p className="hero-description">
-          Diseñamos páginas web, sistemas de reservas,
-          herramientas de gestión y automatizaciones
-          para que tu negocio ahorre tiempo, se organice
-          mejor y siga creciendo.
+          Creamos páginas web profesionales, sistemas
+          de reservas, herramientas de gestión y
+          automatizaciones para emprendimientos,
+          profesionales y comercios.
+
+          Te ayudamos a llevar tu negocio al mundo
+          digital con soluciones hechas a medida.
         </p>
 
         <div className="hero-actions">
           <a href="#contacto" className="btn-primary">
-            Contanos tu idea →
+            Pedí tu presupuesto →
           </a>
 
           <a href="#demos" className="btn-secondary">
-            Explorar demos
+            Ver nuestros proyectos
           </a>
         </div>
       </div>

@@ -1,6 +1,11 @@
-import "../styles/Services.css"
-import { FaGlobe, FaLaptopCode, FaCogs, FaChartBar } from "react-icons/fa"
 
+import "../styles/Services.css"
+import {
+  FaGlobe,
+  FaLaptopCode,
+  FaCogs,
+  FaChartBar
+} from "react-icons/fa"
 
 function Services() {
   return (
@@ -9,12 +14,14 @@ function Services() {
       <div className="section-header">
         <p className="tag">NUESTROS SERVICIOS</p>
 
-        <h2>¿Qué podemos crear para tu negocio?</h2>
+        <h2>
+          Soluciones digitales para tu negocio.
+        </h2>
 
         <p className="services-intro">
-          Desde una página web para mostrar lo que hacés
-          hasta herramientas digitales para simplificar
-          tu trabajo.
+          Desarrollamos páginas web, sistemas y
+          herramientas digitales para emprendimientos,
+          comercios y profesionales en Uruguay.
         </p>
       </div>
 
@@ -25,12 +32,14 @@ function Services() {
             <FaGlobe />
           </div>
 
-          <h3>Páginas web</h3>
+          <h3>Diseño y desarrollo de páginas web</h3>
 
           <p>
-            Mostrá tu negocio, productos y servicios
-            con una web moderna, profesional y
-            adaptada a cualquier dispositivo.
+            Creamos sitios web profesionales para
+            mostrar tus productos, servicios y trabajos.
+            Diseños adaptados a celulares, tablets
+            y computadoras, con opciones de contacto
+            y consultas por WhatsApp.
           </p>
         </div>
 
@@ -39,12 +48,14 @@ function Services() {
             <FaLaptopCode />
           </div>
 
-          <h3>Sistemas a medida</h3>
+          <h3>Sistemas de reservas y gestión</h3>
 
           <p>
-            Desarrollamos sistemas de reservas,
-            gestión de clientes, pedidos y herramientas
-            adaptadas a tu forma de trabajar.
+            Desarrollamos sistemas a medida para
+            gestionar turnos, reservas, pedidos y
+            clientes. Ideales para peluquerías,
+            centros de estética, comercios y
+            emprendimientos que necesitan organizarse.
           </p>
         </div>
 
@@ -53,12 +64,13 @@ function Services() {
             <FaCogs />
           </div>
 
-          <h3>Automatizaciones</h3>
+          <h3>Automatización de procesos</h3>
 
           <p>
-            Simplificamos tareas repetitivas y
-            procesos manuales para que puedas
-            ahorrar tiempo y enfocarte en tu negocio.
+            Automatizamos tareas repetitivas,
+            consultas y procesos administrativos
+            para reducir el trabajo manual
+            y simplificar el día a día de tu negocio.
           </p>
         </div>
 
@@ -67,26 +79,25 @@ function Services() {
             <FaChartBar />
           </div>
 
-          <h3>Datos y dashboards</h3>
+          <h3>Dashboards y análisis de datos</h3>
 
           <p>
-            Transformamos tus datos en reportes
-            y paneles visuales que te ayudan
-            a entender mejor tu negocio.
+            Creamos reportes y paneles visuales
+            para analizar ventas, clientes e
+            indicadores de tu negocio, ayudándote
+            a tomar decisiones con información clara.
           </p>
         </div>
 
       </div>
 
       <p className="services-note">
-        Cada solución se adapta a las necesidades
-        y objetivos de tu negocio.
+        Cada proyecto se desarrolla según las
+        necesidades y objetivos de tu negocio.
       </p>
 
     </section>
   )
 }
-
-
 
 export default Services

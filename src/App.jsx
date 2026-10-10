@@ -39,20 +39,26 @@ function App() {
     if (hash.startsWith("#/demos/peluqueria")) {
       return <PeluqueriaDemo hash={hash} />
     }
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <Services />
-      <Features />
-      <Demos />
-      <HowWeWork />
-      <About />
-      <FAQ />
-      <Contact />
-      <Footer />
-    </>
-  )
+
+    return (
+      <>
+        <Navbar />
+
+        <main>
+          <Hero />
+          <Services />
+          <Features />
+          <Demos />
+          <HowWeWork />
+          <About />
+          <FAQ />
+          <Contact />
+        </main>
+
+        <Footer />
+      </>
+    )
+
 }
 
 export default App
