@@ -59,6 +59,9 @@ const professionals = [
 const defaultTimes = ["09:00", "10:30", "12:00", "14:00", "15:30", "17:00", "18:30"]
 
 function PeluqueriaDemo({ hash }) {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
       const section = hash.split("/").at(-1)
 
